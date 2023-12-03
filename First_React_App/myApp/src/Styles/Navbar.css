@@ -30,3 +30,16 @@
 .nav-parent p {
     cursor: pointer;
 }
+
+.container {
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container button{
+    padding: 5px 20px;
+}

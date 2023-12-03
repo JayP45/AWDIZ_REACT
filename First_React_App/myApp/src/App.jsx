@@ -6,6 +6,7 @@ import Login from './Components/Login';
 import Navbar from './Components/Navbar';
 import NoPageFound from './Components/NoPageFound';
 import Footer from './Components/Footer';
+import Counter from './Components/Counter';
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
             <Route exact path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/counter' element={<Counter/>}/>
           </Routes>
         </Router>
         <Footer />
