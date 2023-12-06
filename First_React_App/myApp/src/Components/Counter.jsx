@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './../Styles/Navbar.css'
+
 const Counter = () => {
     const [count,setCount] = useState(1)
     const [isLoggedIn, setisLoggedIn] = useState(true)

@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Components/Home';
 import Register from './Components/Register';
@@ -7,6 +8,7 @@ import Navbar from './Components/Navbar';
 import NoPageFound from './Components/NoPageFound';
 import Footer from './Components/Footer';
 import Counter from './Components/Counter';
+import UseEffect from './Components/UseEffect';
 const App = () => {
   return (
     <>
@@ -19,6 +21,7 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/counter' element={<Counter/>}/>
+            <Route path='/use' element={<UseEffect/>}/>
           </Routes>
         </Router>
         <Footer />

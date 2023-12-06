@@ -3,7 +3,7 @@ import React from 'react'
 const Register = () => {
   return (
     <>
-    <h1>Register</h1>
+    <h1 style={{textAlign:'center',border:'1px solid black'}}>Register</h1>
     </>
   )
 }
