@@ -56,3 +56,17 @@
   border-radius:5px ;
   border: 1px solid black;
 }
+
+.useparams-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.dynamic-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}

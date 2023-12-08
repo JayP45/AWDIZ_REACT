@@ -9,6 +9,8 @@ import NoPageFound from './Components/NoPageFound';
 import Footer from './Components/Footer';
 import Counter from './Components/Counter';
 import UseEffect from './Components/UseEffect';
+import UseParams from './08-12-2023/UseParams';
+import DynamicRouting from './08-12-2023/DynamicRouting';
 const App = () => {
   return (
     <>
@@ -21,7 +23,9 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/counter' element={<Counter/>}/>
-            <Route path='/use' element={<UseEffect/>}/>
+            <Route path='/useEffect' element={<UseEffect/>}/>
+            <Route path='/useparams/:age' element={<UseParams/>}/>
+            <Route path='/dynamic' element={<DynamicRouting/>}/>
           </Routes>
         </Router>
         <Footer />
