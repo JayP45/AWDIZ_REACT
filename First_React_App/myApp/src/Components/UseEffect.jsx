@@ -5,7 +5,7 @@ const UseEffect = () => {
 
   useEffect(() => {
     alert('i am useEffect')
-  })
+  },[])
   return (
     <>
       <div className="useEffect-container">
