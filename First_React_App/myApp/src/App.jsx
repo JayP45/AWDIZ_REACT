@@ -14,6 +14,8 @@ import DynamicRouting from './08-12-2023/DynamicRouting';
 import MapObject from './09-12-2023/MapObject'
 import PropsMaps from './09-12-2023/PropsMaps';
 import StyledComponent from './09-12-2023/StyledComponent';
+import Toggle from './10-12-2023/Toggle';
+import LoginForm from './10-12-2023/LoginForm';
 
 const App = () => {
 
@@ -61,6 +63,8 @@ const App = () => {
             <Route path='/mapobject' element={<MapObject myStudentsData={students} />} />
             <Route path='/props' element={<PropsMaps name={myName} myAge='25' NameChange={ChangeName} myStudents={["krish", "jay", "shahbaj", "shrusti", "adesh"]}/>} />
             <Route path='/styled' element={<StyledComponent/>}/>
+            <Route path='/toggle' element={<Toggle/>}/>
+            <Route path='/loginform' element={<LoginForm/>}/>
           </Routes>
         </Router>
         <Footer />
