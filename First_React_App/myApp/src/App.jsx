@@ -16,6 +16,7 @@ import PropsMaps from './09-12-2023/PropsMaps';
 import StyledComponent from './09-12-2023/StyledComponent';
 import Toggle from './10-12-2023/Toggle';
 import LoginForm from './10-12-2023/LoginForm';
+import RegisterForm from './10-12-2023/RegisterForm';
 
 const App = () => {
 
@@ -65,6 +66,7 @@ const App = () => {
             <Route path='/styled' element={<StyledComponent/>}/>
             <Route path='/toggle' element={<Toggle/>}/>
             <Route path='/loginform' element={<LoginForm/>}/>
+            <Route path='/registerForm' element={<RegisterForm/>}/>
           </Routes>
         </Router>
         <Footer />
