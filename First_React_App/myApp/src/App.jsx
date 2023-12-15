@@ -15,8 +15,8 @@ import MapObject from './09-12-2023/MapObject'
 import PropsMaps from './09-12-2023/PropsMaps';
 import StyledComponent from './09-12-2023/StyledComponent';
 import Toggle from './10-12-2023/Toggle';
-import LoginForm from './10-12-2023/LoginForm';
 import RegisterForm from './10-12-2023/RegisterForm';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
 
@@ -50,6 +50,7 @@ const App = () => {
   return (
     <>
       <div className="App">
+      <Toaster/>
         <Router>
           <Navbar />
           <Routes>
@@ -65,7 +66,6 @@ const App = () => {
             <Route path='/props' element={<PropsMaps name={myName} myAge='25' NameChange={ChangeName} myStudents={["krish", "jay", "shahbaj", "shrusti", "adesh"]}/>} />
             <Route path='/styled' element={<StyledComponent/>}/>
             <Route path='/toggle' element={<Toggle/>}/>
-            <Route path='/loginform' element={<LoginForm/>}/>
             <Route path='/registerForm' element={<RegisterForm/>}/>
           </Routes>
         </Router>
