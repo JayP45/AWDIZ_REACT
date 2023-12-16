@@ -17,6 +17,8 @@ import StyledComponent from './09-12-2023/StyledComponent';
 import Toggle from './10-12-2023/Toggle';
 import RegisterForm from './10-12-2023/RegisterForm';
 import { Toaster } from 'react-hot-toast';
+import AllProducts from './16-12-2023/AllProducts';
+import ChildrenToParent from './16-12-2023/ChildrenToParent';
 
 const App = () => {
 
@@ -67,6 +69,8 @@ const App = () => {
             <Route path='/styled' element={<StyledComponent/>}/>
             <Route path='/toggle' element={<Toggle/>}/>
             <Route path='/registerForm' element={<RegisterForm/>}/>
+            <Route path='/child' element={<ChildrenToParent/>}/>
+            <Route path='/products' element={<AllProducts/>}/>
           </Routes>
         </Router>
         <Footer />
