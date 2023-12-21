@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { SpinnerDotted } from 'spinners-react';
+import { useNavigate } from 'react-router-dom';
 const AllProducts = () => {
     const [data, setData] = useState([])
+    const navigate = useNavigate()
 
-    const getData = async () => {
-        try {
+    const getData = () => {
+        setTimeout(async()=>{
+            try {
             
-            const res = await axios.get('https://fakestoreapi.com/products')
-            console.log(res.data)
-            setData(res.data)
+                const res = await axios.get('https://fakestoreapi.com/products')
+                console.log(res.data)
+                setData(res.data)
+    
+            } catch (error) {
+                console.log(error)
+            }
+        },2000)   
+    }
 
-        } catch (error) {
-            console.log(error)
-        }
+    const pageNavigate=(id)=>{
+        navigate(`/single-product/${id}`)
+        console.log(id)
     }
 
     useEffect(() => {
@@ -22,25 +32,16 @@ const AllProducts = () => {
     return (
         <>
             <div>
-                <h1>All Products</h1>
-                {
-                    data.map(({ category, description, image, price, title, id, rating }) => {
-                        return (
-                            <>
-                                <div key={id}>
-                                    <h1>{category}</h1>
-                                    <h3>{description}</h3>
-                                    <img src={image} style={{ height: '200px', width: '200px' }} alt="img" />
-                                    <p>{price}</p>
-                                    <p>{rating.rate}</p>
-                                    <p>{title}</p>
-                                    <hr></hr>
-                                </div>
-                            </>
-                        )
-                    })
-                    }
-            </div>
+            {data?.length ? <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+                {data.map(({id,title,price,image}) => (
+                    <div onClick={() => pageNavigate(id)} style={{ height: '500px', width: "23%", border: '2px solid black', marginBottom: '30px', cursor: 'pointer' }}>
+                        <img style={{ height: "400px", margin: 'auto' }} src={image} />
+                        <h1>{title}</h1>
+                        <h3>${price}/-</h3>
+                    </div>
+                ))}
+            </div> : <div style={{textAlign:'center'}}><SpinnerDotted/></div>}
+        </div>
         </>
     )
 }

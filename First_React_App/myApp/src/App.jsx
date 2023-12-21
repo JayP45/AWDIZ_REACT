@@ -19,6 +19,7 @@ import RegisterForm from './10-12-2023/RegisterForm';
 import { Toaster } from 'react-hot-toast';
 import AllProducts from './16-12-2023/AllProducts';
 import ChildrenToParent from './16-12-2023/ChildrenToParent';
+import SingleProduct from './20-12-2023/SingleProduct';
 
 const App = () => {
 
@@ -71,6 +72,7 @@ const App = () => {
             <Route path='/registerForm' element={<RegisterForm/>}/>
             <Route path='/child' element={<ChildrenToParent/>}/>
             <Route path='/products' element={<AllProducts/>}/>
+            <Route path='/single-product/:id' element={<SingleProduct/>}/>
           </Routes>
         </Router>
         <Footer />
