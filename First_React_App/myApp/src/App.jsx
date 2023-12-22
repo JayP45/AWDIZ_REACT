@@ -20,6 +20,7 @@ import { Toaster } from 'react-hot-toast';
 import AllProducts from './16-12-2023/AllProducts';
 import ChildrenToParent from './16-12-2023/ChildrenToParent';
 import SingleProduct from './20-12-2023/SingleProduct';
+import UseMemo from './22-12-2023/UseMemo';
 
 const App = () => {
 
@@ -73,6 +74,7 @@ const App = () => {
             <Route path='/child' element={<ChildrenToParent/>}/>
             <Route path='/products' element={<AllProducts/>}/>
             <Route path='/single-product/:id' element={<SingleProduct/>}/>
+            <Route path='/memo' element={<UseMemo/>}/>
           </Routes>
         </Router>
         <Footer />
