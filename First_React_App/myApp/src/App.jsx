@@ -21,6 +21,7 @@ import AllProducts from './16-12-2023/AllProducts';
 import ChildrenToParent from './16-12-2023/ChildrenToParent';
 import SingleProduct from './20-12-2023/SingleProduct';
 import UseMemo from './22-12-2023/UseMemo';
+import UseCallback from './23-12-2023/UseCallback';
 
 const App = () => {
 
@@ -75,6 +76,7 @@ const App = () => {
             <Route path='/products' element={<AllProducts/>}/>
             <Route path='/single-product/:id' element={<SingleProduct/>}/>
             <Route path='/memo' element={<UseMemo/>}/>
+            <Route path='/callback' element={<UseCallback/>}/>
           </Routes>
         </Router>
         <Footer />
