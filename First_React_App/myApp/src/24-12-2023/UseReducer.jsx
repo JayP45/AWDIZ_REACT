@@ -23,7 +23,7 @@ const Reducer = (state, action) => {
 const UseReducer = () => {
     // Step 3
     const [state, dispatch] = useReducer(Reducer, initialState)
-    console.log(state, "state")
+    // console.log(state, "state")
 
     return (
         <div>
