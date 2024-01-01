@@ -23,6 +23,7 @@ import SingleProduct from './20-12-2023/SingleProduct';
 import UseMemo from './22-12-2023/UseMemo';
 import UseCallback from './23-12-2023/UseCallback';
 import UseReducer from './24-12-2023/UseReducer';
+import ReduxCounter from './Redux/ReduxCounter';
 
 const App = () => {
 
@@ -79,6 +80,7 @@ const App = () => {
             <Route path='/memo' element={<UseMemo/>}/>
             <Route path='/callback' element={<UseCallback/>}/>
             <Route path='/reducer' element={<UseReducer/>}/>
+            <Route path='/redux' element={<ReduxCounter/>}/>
           </Routes>
         </Router>
         <Footer />

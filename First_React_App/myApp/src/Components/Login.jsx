@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../context/AuthContext';
 const Login = () => {
   let navigate = useNavigate();
   const [data, setData] = useState({
     Name: '',
     Password: ''
   })
+  const { state, dispatch } = useContext(MyContext)
+  console.log(state?.user, "state?.user")
 
   const handleChange = (e) => {
     console.log(e.target.name, e.target.value)
@@ -20,11 +23,14 @@ const Login = () => {
         const response = {
           data1: {
             success: true,
-            message: 'Login Successful'
+            message: 'Login Successful',
+            user: { name: "Jay", email: "jay@gmail.com" }, token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
           }
         };
         if (response.data1.success) {
           toast.success(response.data1.message);
+          dispatch({ type: "LOGIN", payload: response.data1.user })
+          localStorage.setItem('my-token', JSON.stringify(response.data1.token))
           navigate('/')
 
         }
