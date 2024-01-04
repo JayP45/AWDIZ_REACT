@@ -18,7 +18,7 @@ const RegisterForm = () => {
                     if (response.data.success === true) {
                         alert(response.data.messsage)
                         setUserData({ name: "", email: "", password: "", confirmpassword: "" })
-                        router('/loginform')
+                        router('/login')
                     }
                 } catch (error) {
                     console.log(error)

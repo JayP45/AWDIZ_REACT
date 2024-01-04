@@ -34,10 +34,10 @@ const AuthContext = ({ children }) => {
     }
 
     useEffect(() => {
-        const token = JSON.parse(localStorage.getItem('my-token'))
-        if (token) {
+        // const token = JSON.parse(localStorage.getItem('my-token'))
+        // if (token) {
             getCurrentUserData()
-        }
+        // }
     }, [])
 
 
